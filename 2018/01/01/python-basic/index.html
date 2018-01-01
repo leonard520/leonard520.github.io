@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="markdown," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Markdown是一种极简的『标记语言』之前做读书笔记，基本都是随手记录，苦于不想花时间在排版上，但是不排版的后果是笔记没有层次感。Markdown正是我需要的东西。 语法笔记如下 区块元素段落和换行一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行。 标题类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶。例如  # 这是 H1#">
-<meta name="keywords" content="markdown">
+<meta name="description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown 语法笔记">
-<meta property="og:url" content="http://www.myloveivory.me/2017/12/31/markdown/index.html">
+<meta property="og:title" content="Python 语法基础">
+<meta property="og:url" content="http://www.myloveivory.me/2018/01/01/python-basic/index.html">
 <meta property="og:site_name" content="Leonard&#39;s blog">
-<meta property="og:description" content="Markdown是一种极简的『标记语言』之前做读书笔记，基本都是随手记录，苦于不想花时间在排版上，但是不排版的后果是笔记没有层次感。Markdown正是我需要的东西。 语法笔记如下 区块元素段落和换行一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行。 标题类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶。例如  # 这是 H1#">
+<meta property="og:description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-30T17:03:11.000Z">
+<meta property="og:updated_time" content="2018-01-01T08:09:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown 语法笔记">
-<meta name="twitter:description" content="Markdown是一种极简的『标记语言』之前做读书笔记，基本都是随手记录，苦于不想花时间在排版上，但是不排版的后果是笔记没有层次感。Markdown正是我需要的东西。 语法笔记如下 区块元素段落和换行一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行。 标题类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶。例如  # 这是 H1#">
+<meta name="twitter:title" content="Python 语法基础">
+<meta name="twitter:description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.myloveivory.me/2017/12/31/markdown/"/>
+  <link rel="canonical" href="http://www.myloveivory.me/2018/01/01/python-basic/"/>
 
 
 
 
 
-  <title>Markdown 语法笔记 | Leonard's blog</title>
+  <title>Python 语法基础 | Leonard's blog</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.myloveivory.me/2017/12/31/markdown/">
+    <link itemprop="mainEntityOfPage" href="http://www.myloveivory.me/2018/01/01/python-basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leonard Ding">
@@ -324,7 +324,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Markdown 语法笔记</h2>
+          <h2 class="post-title" itemprop="name headline">Python 语法基础</h2>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-31T00:12:58+08:00">
-                2017-12-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T15:37:00+08:00">
+                2018-01-01
               </time>
             
 
@@ -346,28 +346,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -401,73 +379,19 @@
       
 
       
-        <p>Markdown是一种极简的『标记语言』<br>之前做读书笔记，基本都是随手记录，苦于不想花时间在排版上，但是不排版的后果是笔记没有层次感。Markdown正是我需要的东西。</p>
-<p><strong>语法笔记如下</strong></p>
-<h1 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h1><h2 id="段落和换行"><a href="#段落和换行" class="headerlink" title="段落和换行"></a>段落和换行</h2><p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行。</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶。<br>例如</p>
-<blockquote>
-<p># 这是 H1<br>## 这是 H2</p>
-</blockquote>
-<h2 id="区块引用-Blockquotes"><a href="#区块引用-Blockquotes" class="headerlink" title="区块引用 Blockquotes"></a>区块引用 Blockquotes</h2><p>Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 &gt; ：<br>Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt;<br>区块引用可以嵌套<br>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：<br>例如</p>
-<blockquote>
-<p>> This is the first level of quoting.<br>><br>> > This is nested blockquote.<br>><br>> Back to the first level.</p>
-</blockquote>
-<p>效果</p>
-<blockquote>
-<p>This is the first level of quoting.</p>
-<blockquote>
-<p>This is nested blockquote.</p>
-</blockquote>
-<p>Back to the first level.</p>
-</blockquote>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表使用星号、加号或是减号作为列表标记：<br>有序列表则使用数字接着一个英文句点：</p>
-<blockquote>
-<p>*   Red<br>*   Green<br>*   Blue</p>
-</blockquote>
-<p>效果</p>
-<blockquote>
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-</blockquote>
-<h2 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h2><p>要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以</p>
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
-<h1 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h1><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。<br>例如</p>
-<blockquote>
-<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a> inline link.</p>
-</blockquote>
-<p>参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：<br>例如</p>
-<blockquote>
-<p>This is [an example][id] reference-style link.<br>接着，在文件的任意处，你可以把这个标记的链接内容定义出来：<br>[id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>  “Optional Title Here”</p>
-</blockquote>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 <em> 包围的字词会被转成斜体，用两个 * 或 </em> 包起来的话，则会被转成粗体，例如：</p>
-<blockquote>
-<p>*single asterisks*<br>_single underscores_<br>**double asterisks**<br>__double underscores__</p>
-</blockquote>
-<p>效果</p>
-<blockquote>
-<p><em>single asterisks</em><br><em>single underscores</em><br><strong>double asterisks</strong><br><strong>double underscores</strong></p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：</p>
-<blockquote>
-<p>Use the `printf()` function.</p>
-</blockquote>
-<p>效果</p>
-<blockquote>
-<p>Use the <code>printf()</code> function.</p>
-</blockquote>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。<br>行内式的图片语法看起来像是：</p>
-<blockquote>
-<p>![Alt text](/path/to/img.jpg)<br>![Alt text](/path/to/img.jpg “Optional title”)</p>
-</blockquote>
-<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。</p>
-<h2 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h2><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号。</p>
-<blockquote>
-<p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
-</blockquote>
-
+        <p>Python 语法基础<br>整理归纳自 <a href="http://cs231n.github.io/python-numpy-tutorial/" title="Title" target="_blank" rel="noopener">CS231n</a><br>This tutorial was contributed by Justin Johnson.</p>
+<h1 id="basic-types"><a href="#basic-types" class="headerlink" title="basic types"></a>basic types</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">print(type(x)) <span class="comment"># Prints "&lt;class 'int'&gt;"</span></span><br><span class="line">print(x)       <span class="comment"># Prints "3"</span></span><br><span class="line">print(x + <span class="number">1</span>)   <span class="comment"># Addition; prints "4"</span></span><br><span class="line">print(x - <span class="number">1</span>)   <span class="comment"># Subtraction; prints "2"</span></span><br><span class="line">print(x * <span class="number">2</span>)   <span class="comment"># Multiplication; prints "6"</span></span><br><span class="line">print(x ** <span class="number">2</span>)  <span class="comment"># Exponentiation; prints "9"</span></span><br><span class="line">x += <span class="number">1</span></span><br><span class="line">print(x)  <span class="comment"># Prints "4"</span></span><br><span class="line">x *= <span class="number">2</span></span><br><span class="line">print(x)  <span class="comment"># Prints "8"</span></span><br><span class="line">y = <span class="number">2.5</span></span><br><span class="line">print(type(y)) <span class="comment"># Prints "&lt;class 'float'&gt;"</span></span><br><span class="line">print(y, y + <span class="number">1</span>, y * <span class="number">2</span>, y ** <span class="number">2</span>) <span class="comment"># Prints "2.5 3.5 5.0 6.25"</span></span><br></pre></td></tr></table></figure>
+<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hello = <span class="string">'hello'</span>    <span class="comment"># String literals can use single quotes</span></span><br><span class="line">world = <span class="string">"world"</span>    <span class="comment"># or double quotes; it does not matter.</span></span><br><span class="line">print(hello)       <span class="comment"># Prints "hello"</span></span><br><span class="line">print(len(hello))  <span class="comment"># String length; prints "5"</span></span><br><span class="line">hw = hello + <span class="string">' '</span> + world  <span class="comment"># String concatenation</span></span><br><span class="line">print(hw)  <span class="comment"># prints "hello world"</span></span><br><span class="line">hw12 = <span class="string">'%s %s %d'</span> % (hello, world, <span class="number">12</span>)  <span class="comment"># sprintf style string formatting</span></span><br><span class="line">print(hw12)  <span class="comment"># prints "hello world 12"</span></span><br><span class="line">s = <span class="string">"hello"</span></span><br><span class="line">print(s.capitalize())  <span class="comment"># Capitalize a string; prints "Hello"</span></span><br><span class="line">print(s.upper())       <span class="comment"># Convert a string to uppercase; prints "HELLO"</span></span><br><span class="line">print(s.rjust(<span class="number">7</span>))      <span class="comment"># Right-justify a string, padding with spaces; prints "  hello"</span></span><br><span class="line">print(s.center(<span class="number">7</span>))     <span class="comment"># Center a string, padding with spaces; prints " hello "</span></span><br><span class="line">print(s.replace(<span class="string">'l'</span>, <span class="string">'(ell)'</span>))  <span class="comment"># Replace all instances of one substring with another;</span></span><br><span class="line">                                <span class="comment"># prints "he(ell)(ell)o"</span></span><br><span class="line">print(<span class="string">'  world '</span>.strip())  <span class="comment"># Strip leading and trailing whitespace; prints "world"</span></span><br></pre></td></tr></table></figure>
+<h1 id="container"><a href="#container" class="headerlink" title="container"></a>container</h1><h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xs = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>]    <span class="comment"># Create a list</span></span><br><span class="line">print(xs, xs[<span class="number">2</span>])  <span class="comment"># Prints "[3, 1, 2] 2"</span></span><br><span class="line">print(xs[<span class="number">-1</span>])     <span class="comment"># Negative indices count from the end of the list; prints "2"</span></span><br><span class="line">xs[<span class="number">2</span>] = <span class="string">'foo'</span>     <span class="comment"># Lists can contain elements of different types</span></span><br><span class="line">print(xs)         <span class="comment"># Prints "[3, 1, 'foo']"</span></span><br><span class="line">xs.append(<span class="string">'bar'</span>)  <span class="comment"># Add a new element to the end of the list</span></span><br><span class="line">print(xs)         <span class="comment"># Prints "[3, 1, 'foo', 'bar']"</span></span><br><span class="line">x = xs.pop()      <span class="comment"># Remove and return the last element of the list</span></span><br><span class="line">print(x, xs)      <span class="comment"># Prints "bar [3, 1, 'foo']"</span></span><br></pre></td></tr></table></figure>
+<h3 id="slicing"><a href="#slicing" class="headerlink" title="slicing"></a>slicing</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nums = list(range(<span class="number">5</span>))     <span class="comment"># range is a built-in function that creates a list of integers</span></span><br><span class="line">print(nums)               <span class="comment"># Prints "[0, 1, 2, 3, 4]"</span></span><br><span class="line">print(nums[<span class="number">2</span>:<span class="number">4</span>])          <span class="comment"># Get a slice from index 2 to 4 (exclusive); prints "[2, 3]"</span></span><br><span class="line">print(nums[<span class="number">2</span>:])           <span class="comment"># Get a slice from index 2 to the end; prints "[2, 3, 4]"</span></span><br><span class="line">print(nums[:<span class="number">2</span>])           <span class="comment"># Get a slice from the start to index 2 (exclusive); prints "[0, 1]"</span></span><br><span class="line">print(nums[:])            <span class="comment"># Get a slice of the whole list; prints "[0, 1, 2, 3, 4]"</span></span><br><span class="line">print(nums[:<span class="number">-1</span>])          <span class="comment"># Slice indices can be negative; prints "[0, 1, 2, 3]"</span></span><br><span class="line">nums[<span class="number">2</span>:<span class="number">4</span>] = [<span class="number">8</span>, <span class="number">9</span>]        <span class="comment"># Assign a new sublist to a slice</span></span><br><span class="line">print(nums)               <span class="comment"># Prints "[0, 1, 8, 9, 4]”</span></span><br></pre></td></tr></table></figure>
+<h3 id="loops"><a href="#loops" class="headerlink" title="loops"></a>loops</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">'cat'</span>, <span class="string">'dog'</span>, <span class="string">'monkey'</span>]</span><br><span class="line"><span class="keyword">for</span> animal <span class="keyword">in</span> animals:</span><br><span class="line">    print(animal)</span><br><span class="line"><span class="comment"># Prints "cat", "dog", "monkey", each on its own line.</span></span><br></pre></td></tr></table></figure>
+<p>If you want access to the index of each element within the body of a loop, use the built-in enumerate function:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">'cat'</span>, <span class="string">'dog'</span>, <span class="string">'monkey'</span>]</span><br><span class="line"><span class="keyword">for</span> idx, animal <span class="keyword">in</span> enumerate(animals):</span><br><span class="line">    print(<span class="string">'#%d: %s'</span> % (idx + <span class="number">1</span>, animal))</span><br><span class="line"><span class="comment"># Prints "#1: cat", "#2: dog", "#3: monkey", each on its own line</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="list-comprehension"><a href="#list-comprehension" class="headerlink" title="list comprehension"></a>list comprehension</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">    squares.append(x ** <span class="number">2</span>)</span><br><span class="line">print(squares)   <span class="comment"># Prints [0, 1, 4, 9, 16]</span></span><br></pre></td></tr></table></figure>
+<p>You can make this code simpler using a list comprehension:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">squares = [x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums]</span><br><span class="line">print(squares)   <span class="comment"># Prints [0, 1, 4, 9, 16]</span></span><br></pre></td></tr></table></figure></p>
+<p>List comprehensions can also contain conditions:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">even_squares = [x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">print(even_squares)  <span class="comment"># Prints "[0, 4, 16]”</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">'cat'</span>: <span class="string">'cute'</span>, <span class="string">'dog'</span>: <span class="string">'furry'</span>&#125;  <span class="comment"># Create a new dictionary with some data</span></span><br><span class="line">print(d[<span class="string">'cat'</span>])       <span class="comment"># Get an entry from a dictionary; prints "cute"</span></span><br><span class="line">print(<span class="string">'cat'</span> <span class="keyword">in</span> d)     <span class="comment"># Check if a dictionary has a given key; prints "True"</span></span><br><span class="line">d[<span class="string">'fish'</span>] = <span class="string">'wet'</span>     <span class="comment"># Set an entry in a dictionary</span></span><br><span class="line">print(d[<span class="string">'fish'</span>])      <span class="comment"># Prints "wet"</span></span><br><span class="line"><span class="comment"># print(d['monkey'])  # KeyError: 'monkey' not a key of d</span></span><br><span class="line">print(d.get(<span class="string">'monkey'</span>, <span class="string">'N/A'</span>))  <span class="comment"># Get an element with a default; prints "N/A"</span></span><br><span class="line">print(d.get(<span class="string">'fish'</span>, <span class="string">'N/A'</span>))    <span class="comment"># Get an element with a default; prints "wet"</span></span><br><span class="line"><span class="keyword">del</span> d[<span class="string">'fish'</span>]         <span class="comment"># Remove an element from a dictionary</span></span><br><span class="line">print(d.get(<span class="string">'fish'</span>, <span class="string">'N/A'</span>)) <span class="comment"># "fish" is no longer a key; prints "N/A"</span></span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">'person'</span>: <span class="number">2</span>, <span class="string">'cat'</span>: <span class="number">4</span>, <span class="string">'spider'</span>: <span class="number">8</span>&#125;</span><br><span class="line"><span class="keyword">for</span> animal, legs <span class="keyword">in</span> d.items():</span><br><span class="line">    print(<span class="string">'A %s has %d legs'</span> % (animal, legs))</span><br><span class="line"><span class="comment"># Prints "A person has 2 legs", "A cat has 4 legs", "A spider has 8 legs"</span></span><br><span class="line">Dictionary comprehensions: These are similar to list comprehensions, but allow you to easily construct dictionaries. For example:</span><br><span class="line"></span><br><span class="line">nums = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">even_num_to_square = &#123;x: x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(even_num_to_square)  <span class="comment"># Prints "&#123;0: 0, 2: 4, 4: 16&#125;”</span></span><br></pre></td></tr></table></figure>
+<h2 id="sets"><a href="#sets" class="headerlink" title="sets"></a>sets</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">animals = &#123;<span class="string">'cat'</span>, <span class="string">'dog'</span>&#125;</span><br><span class="line">print(<span class="string">'cat'</span> <span class="keyword">in</span> animals)   <span class="comment"># Check if an element is in a set; prints "True"</span></span><br><span class="line">print(<span class="string">'fish'</span> <span class="keyword">in</span> animals)  <span class="comment"># prints "False"</span></span><br><span class="line">animals.add(<span class="string">'fish'</span>)       <span class="comment"># Add an element to a set</span></span><br><span class="line">print(<span class="string">'fish'</span> <span class="keyword">in</span> animals)  <span class="comment"># Prints "True"</span></span><br><span class="line">print(len(animals))       <span class="comment"># Number of elements in a set; prints "3"</span></span><br><span class="line">animals.add(<span class="string">'cat'</span>)        <span class="comment"># Adding an element that is already in the set does nothing</span></span><br><span class="line">print(len(animals))       <span class="comment"># Prints "3"</span></span><br><span class="line">animals.remove(<span class="string">'cat'</span>)     <span class="comment"># Remove an element from a set</span></span><br><span class="line">print(len(animals))       <span class="comment"># Prints “2"</span></span><br></pre></td></tr></table></figure>
+<h2 id="tuples"><a href="#tuples" class="headerlink" title="tuples"></a>tuples</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;(x, x + <span class="number">1</span>): x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)&#125;  <span class="comment"># Create a dictionary with tuple keys</span></span><br><span class="line">t = (<span class="number">5</span>, <span class="number">6</span>)        <span class="comment"># Create a tuple</span></span><br><span class="line">print(type(t))    <span class="comment"># Prints "&lt;class 'tuple'&gt;"</span></span><br><span class="line">print(d[t])       <span class="comment"># Prints "5"</span></span><br><span class="line">print(d[(<span class="number">1</span>, <span class="number">2</span>)])  <span class="comment"># Prints “1"</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -508,7 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -521,15 +445,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/31/markdown/" rel="next" title="Markdown 语法笔记">
+                <i class="fa fa-chevron-left"></i> Markdown 语法笔记
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/01/python-basic/" rel="prev" title="Python 语法基础">
-                Python 语法基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -663,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#区块元素"><span class="nav-number">1.</span> <span class="nav-text">区块元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#段落和换行"><span class="nav-number">1.1.</span> <span class="nav-text">段落和换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.2.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区块引用-Blockquotes"><span class="nav-number">1.3.</span> <span class="nav-text">区块引用 Blockquotes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">1.4.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码区块"><span class="nav-number">1.5.</span> <span class="nav-text">代码区块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分隔线"><span class="nav-number">1.6.</span> <span class="nav-text">分隔线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#区段元素"><span class="nav-number">2.</span> <span class="nav-text">区段元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">2.1.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强调"><span class="nav-number">2.2.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">2.4.</span> <span class="nav-text">图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其它"><span class="nav-number">3.</span> <span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自动链接"><span class="nav-number">3.1.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反斜杠"><span class="nav-number">3.2.</span> <span class="nav-text">反斜杠</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#basic-types"><span class="nav-number">1.</span> <span class="nav-text">basic types</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">2.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#container"><span class="nav-number">3.</span> <span class="nav-text">container</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">3.1.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#slicing"><span class="nav-number">3.1.1.</span> <span class="nav-text">slicing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loops"><span class="nav-number">3.1.2.</span> <span class="nav-text">loops</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-comprehension"><span class="nav-number">3.1.3.</span> <span class="nav-text">list comprehension</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dictionary"><span class="nav-number">3.2.</span> <span class="nav-text">dictionary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sets"><span class="nav-number">3.3.</span> <span class="nav-text">sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tuples"><span class="nav-number">3.4.</span> <span class="nav-text">tuples</span></a></li></ol></li></ol></div>
             
 
           </div>
