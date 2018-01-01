@@ -4,17 +4,40 @@
 
     
   <url>
+    <loc>http://www.myloveivory.me/2018/01/01/numpy-basic/</loc>
+    <lastmod>2018-01-01T09:37:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Numpy 语法基础</title>
+        <pubTime>2018-01-01T08:16:54.000Z</pubTime>
+        
+        <tag>Python, Numpy</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://www.myloveivory.me/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.myloveivory.me/2018/01/01/python-basic/</loc>
-    <lastmod>2018-01-01T08:09:59.000Z</lastmod>
+    <lastmod>2018-01-01T08:17:33.000Z</lastmod>
     <data>
         <display>
         <title>Python 语法基础</title>
         <pubTime>2018-01-01T07:37:00.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>Python</tag>
          
          
            
+             
+              <breadCrumb title="Python" url="http://www.myloveivory.me/categories/Python/"/>
+          
         </display>
     </data>
     </url>

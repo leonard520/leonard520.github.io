@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
-<meta name="keywords" content="python">
+<meta name="description" content="Python 语法基础 整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Add">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 语法基础">
 <meta property="og:url" content="http://www.myloveivory.me/2018/01/01/python-basic/index.html">
 <meta property="og:site_name" content="Leonard&#39;s blog">
-<meta property="og:description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
+<meta property="og:description" content="Python 语法基础 整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Add">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-01T08:09:59.000Z">
+<meta property="og:updated_time" content="2018-01-01T08:17:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 语法基础">
-<meta name="twitter:description" content="Python 语法基础整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Addi">
+<meta name="twitter:description" content="Python 语法基础 整理归纳自 CS231nThis tutorial was contributed by Justin Johnson. basic types1234567891011121314x = 3print(type(x)) # Prints &quot;&amp;lt;class &apos;int&apos;&amp;gt;&quot;print(x)       # Prints &quot;3&quot;print(x + 1)   # Add">
 
 
 
@@ -347,6 +347,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -379,7 +401,8 @@
       
 
       
-        <p>Python 语法基础<br>整理归纳自 <a href="http://cs231n.github.io/python-numpy-tutorial/" title="Title" target="_blank" rel="noopener">CS231n</a><br>This tutorial was contributed by Justin Johnson.</p>
+        <p>Python 语法基础</p>
+<p>整理归纳自 <a href="http://cs231n.github.io/python-numpy-tutorial/" title="Title" target="_blank" rel="noopener">CS231n</a><br>This tutorial was contributed by Justin Johnson.</p>
 <h1 id="basic-types"><a href="#basic-types" class="headerlink" title="basic types"></a>basic types</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">print(type(x)) <span class="comment"># Prints "&lt;class 'int'&gt;"</span></span><br><span class="line">print(x)       <span class="comment"># Prints "3"</span></span><br><span class="line">print(x + <span class="number">1</span>)   <span class="comment"># Addition; prints "4"</span></span><br><span class="line">print(x - <span class="number">1</span>)   <span class="comment"># Subtraction; prints "2"</span></span><br><span class="line">print(x * <span class="number">2</span>)   <span class="comment"># Multiplication; prints "6"</span></span><br><span class="line">print(x ** <span class="number">2</span>)  <span class="comment"># Exponentiation; prints "9"</span></span><br><span class="line">x += <span class="number">1</span></span><br><span class="line">print(x)  <span class="comment"># Prints "4"</span></span><br><span class="line">x *= <span class="number">2</span></span><br><span class="line">print(x)  <span class="comment"># Prints "8"</span></span><br><span class="line">y = <span class="number">2.5</span></span><br><span class="line">print(type(y)) <span class="comment"># Prints "&lt;class 'float'&gt;"</span></span><br><span class="line">print(y, y + <span class="number">1</span>, y * <span class="number">2</span>, y ** <span class="number">2</span>) <span class="comment"># Prints "2.5 3.5 5.0 6.25"</span></span><br></pre></td></tr></table></figure>
 <h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hello = <span class="string">'hello'</span>    <span class="comment"># String literals can use single quotes</span></span><br><span class="line">world = <span class="string">"world"</span>    <span class="comment"># or double quotes; it does not matter.</span></span><br><span class="line">print(hello)       <span class="comment"># Prints "hello"</span></span><br><span class="line">print(len(hello))  <span class="comment"># String length; prints "5"</span></span><br><span class="line">hw = hello + <span class="string">' '</span> + world  <span class="comment"># String concatenation</span></span><br><span class="line">print(hw)  <span class="comment"># prints "hello world"</span></span><br><span class="line">hw12 = <span class="string">'%s %s %d'</span> % (hello, world, <span class="number">12</span>)  <span class="comment"># sprintf style string formatting</span></span><br><span class="line">print(hw12)  <span class="comment"># prints "hello world 12"</span></span><br><span class="line">s = <span class="string">"hello"</span></span><br><span class="line">print(s.capitalize())  <span class="comment"># Capitalize a string; prints "Hello"</span></span><br><span class="line">print(s.upper())       <span class="comment"># Convert a string to uppercase; prints "HELLO"</span></span><br><span class="line">print(s.rjust(<span class="number">7</span>))      <span class="comment"># Right-justify a string, padding with spaces; prints "  hello"</span></span><br><span class="line">print(s.center(<span class="number">7</span>))     <span class="comment"># Center a string, padding with spaces; prints " hello "</span></span><br><span class="line">print(s.replace(<span class="string">'l'</span>, <span class="string">'(ell)'</span>))  <span class="comment"># Replace all instances of one substring with another;</span></span><br><span class="line">                                <span class="comment"># prints "he(ell)(ell)o"</span></span><br><span class="line">print(<span class="string">'  world '</span>.strip())  <span class="comment"># Strip leading and trailing whitespace; prints "world"</span></span><br></pre></td></tr></table></figure>
 <h1 id="container"><a href="#container" class="headerlink" title="container"></a>container</h1><h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xs = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>]    <span class="comment"># Create a list</span></span><br><span class="line">print(xs, xs[<span class="number">2</span>])  <span class="comment"># Prints "[3, 1, 2] 2"</span></span><br><span class="line">print(xs[<span class="number">-1</span>])     <span class="comment"># Negative indices count from the end of the list; prints "2"</span></span><br><span class="line">xs[<span class="number">2</span>] = <span class="string">'foo'</span>     <span class="comment"># Lists can contain elements of different types</span></span><br><span class="line">print(xs)         <span class="comment"># Prints "[3, 1, 'foo']"</span></span><br><span class="line">xs.append(<span class="string">'bar'</span>)  <span class="comment"># Add a new element to the end of the list</span></span><br><span class="line">print(xs)         <span class="comment"># Prints "[3, 1, 'foo', 'bar']"</span></span><br><span class="line">x = xs.pop()      <span class="comment"># Remove and return the last element of the list</span></span><br><span class="line">print(x, xs)      <span class="comment"># Prints "bar [3, 1, 'foo']"</span></span><br></pre></td></tr></table></figure>
@@ -432,7 +455,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -454,6 +477,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/01/numpy-basic/" rel="prev" title="Numpy 语法基础">
+                Numpy 语法基础 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -530,7 +557,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -541,7 +568,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -552,7 +579,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
