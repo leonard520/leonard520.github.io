@@ -97,14 +97,14 @@
 <meta name="description" content="创建和销毁对象考虑用静态工厂方法代替构造器除了公有的构造函数，类可以提供一个公有的静态工厂方法，它是一个返回类的实例的静态方法。123public static Boolean valueOf(boolean b)&amp;#123;    return b?Boolean.TRUE:Boolean FALSE;&amp;#125; 优点  静态工厂方法在方法命名上更具有可读性 静态工厂方法不需要每次在被调用的时">
 <meta name="keywords" content="Java, effective Java, 读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="effective-java-1">
+<meta property="og:title" content="Effective Java读书笔记1">
 <meta property="og:url" content="http://www.myloveivory.me/2018/03/25/effective-java-1/index.html">
 <meta property="og:site_name" content="Leonard&#39;s blog">
 <meta property="og:description" content="创建和销毁对象考虑用静态工厂方法代替构造器除了公有的构造函数，类可以提供一个公有的静态工厂方法，它是一个返回类的实例的静态方法。123public static Boolean valueOf(boolean b)&amp;#123;    return b?Boolean.TRUE:Boolean FALSE;&amp;#125; 优点  静态工厂方法在方法命名上更具有可读性 静态工厂方法不需要每次在被调用的时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T14:51:30.000Z">
+<meta property="og:updated_time" content="2018-03-25T14:54:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="effective-java-1">
+<meta name="twitter:title" content="Effective Java读书笔记1">
 <meta name="twitter:description" content="创建和销毁对象考虑用静态工厂方法代替构造器除了公有的构造函数，类可以提供一个公有的静态工厂方法，它是一个返回类的实例的静态方法。123public static Boolean valueOf(boolean b)&amp;#123;    return b?Boolean.TRUE:Boolean FALSE;&amp;#125; 优点  静态工厂方法在方法命名上更具有可读性 静态工厂方法不需要每次在被调用的时">
 
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>effective-java-1 | Leonard's blog</title>
+  <title>Effective Java读书笔记1 | Leonard's blog</title>
   
 
 
@@ -324,7 +324,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">effective-java-1</h2>
+          <h2 class="post-title" itemprop="name headline">Effective Java读书笔记1</h2>
         
 
         <div class="post-meta">
@@ -407,7 +407,10 @@
 <li>静态工厂方法在方法命名上更具有可读性</li>
 <li>静态工厂方法不需要每次在被调用的时候都构造一个新的对象，例如Boolean.valueOf(boolean)，节省创建对象的开销</li>
 <li>静态工厂方法还可以返回该类型的子类对象，例如Java collection framework API比导出32个独立公有类的实现方式小得多</li>
-<li>静态工厂方法还可以简化参数化类型的对象创建（目前JDK已经优化）<br>Map<string,integer> map = new HashMap&lt;&gt;();<br>缺点</string,integer></li>
+<li>静态工厂方法还可以简化参数化类型的对象创建（目前JDK已经优化）<br>Map<string,integer> map = new HashMap&lt;&gt;();</string,integer></li>
+</ul>
+<p>缺点</p>
+<ul>
 <li>类如果不含有公有的或者受保护的构造器，就不能被子类实例化</li>
 <li>与其他静态方法没有区别，因此最好使用惯用名称命名——valueOf, of, getInstance, newInstance, getType, newType</li>
 </ul>
