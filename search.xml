@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Effective Java读书笔记-2]]></title>
+    <url>%2F2018%2F03%2F26%2Feffective-java-2%2F</url>
+    <content type="text"><![CDATA[遇到多个构造器参数时要考虑用构建器在一个有很多变量的类中，无论是使用重叠构造器模式（telescoping constructor），还是Java bean，都不能保证安全性和可读性。推荐使用builder模式来构造12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758public class NutritionFacts &#123; private final int servingSize; private final int servings; private final int calories; private final int fat; private final int sodium; private final int carbohydrate; public static class Builder &#123; // Required parameters private final int servingSize; private final int servings; // Optional parameters - initialized to default values private int calories = 0; private int fat = 0; private int sodium = 0; private int carbohydrate = 0; public Builder(int servingSize, int servings) &#123; this.servingSize = servingSize; this.servings = servings; &#125; public Builder calories(int val) &#123; calories = val; return this; &#125; public Builder fat(int val) &#123; fat = val; return this; &#125; public Builder sodium(int val) &#123; sodium = val; return this; &#125; public Builder carbohydrate(int val) &#123; carbohydrate = val; return this; &#125; public NutritionFacts build() &#123; return new NutritionFacts(this); &#125; &#125; private NutritionFacts(Builder builder) &#123; servingSize = builder.servingSize; servings = builder.servings; calories = builder.calories; fat = builder.fat; sodium = builder.sodium; carbohydrate = builder.carbohydrate; &#125;&#125; 调用12NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8) .calories(100).sodium(35).carbohydrate(27).build();]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Effective Java读书笔记-1]]></title>
     <url>%2F2018%2F03%2F25%2Feffective-java-1%2F</url>
     <content type="text"><![CDATA[创建和销毁对象考虑用静态工厂方法代替构造器除了公有的构造函数，类可以提供一个公有的静态工厂方法，它是一个返回类的实例的静态方法。123public static Boolean valueOf(boolean b)&#123; return b?Boolean.TRUE:Boolean FALSE;&#125; 优点 静态工厂方法在方法命名上更具有可读性 静态工厂方法不需要每次在被调用的时候都构造一个新的对象，例如Boolean.valueOf(boolean)，节省创建对象的开销 静态工厂方法还可以返回该类型的子类对象，例如Java collection framework API比导出32个独立公有类的实现方式小得多 静态工厂方法还可以简化参数化类型的对象创建（目前JDK已经优化）Map map = new HashMap&lt;&gt;(); 缺点 类如果不含有公有的或者受保护的构造器，就不能被子类实例化 与其他静态方法没有区别，因此最好使用惯用名称命名——valueOf, of, getInstance, newInstance, getType, newType]]></content>
