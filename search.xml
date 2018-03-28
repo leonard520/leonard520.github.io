@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Effective Java读书笔记-4]]></title>
+    <url>%2F2018%2F03%2F28%2Feffective-java-4%2F</url>
+    <content type="text"><![CDATA[通过私有构造器强化不可实例的能力编写某些类的时候只想包含静态方法和静态域，例如java.lang.Math，这些类不希望被实例化，因此可以让这个类包含私有构造器，并且在构造函数中throw new assertionError()]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-3]]></title>
+    <url>%2F2018%2F03%2F28%2Feffective-java-3%2F</url>
+    <content type="text"><![CDATA[用私有构造器或者枚举类型强化singleton属性 方法1，公有静态成员是个final域。但是，享有特权的客户端可以用AccessibleObject.setAccessible方法，通过反射调用私有构造器，为了抵御这种攻击，可以修改构造器 1234567// Singleton with public field public class Elvis &#123; public static final Elvis INSTANCE = new Elvis(); private Elvis() &#123; ... &#125; public void leaveTheBuilding() &#123; ... &#125; &#125; 方法2，静态工厂方法。方法1的攻击依然存在。对于可序列化，为了保证singleton，必须声明transient，并提供readResolve方法 1234567public class Elvis &#123; private static final Elvis INSTANCE = new Elvis(); private Elvis() &#123; ... &#125; public static Elvis getInstance() &#123; return INSTANCE; &#125; public void leaveTheBuilding() &#123; ... &#125;&#125; 方法3，枚举类。更简洁，绝对安全，最佳方法。 12345public enum Elvis &#123; INSTANCE; public void leaveTheBuilding() &#123; ... &#125;&#125;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Effective Java读书笔记-2]]></title>
     <url>%2F2018%2F03%2F26%2Feffective-java-2%2F</url>
     <content type="text"><![CDATA[遇到多个构造器参数时要考虑用构建器在一个有很多变量的类中，无论是使用重叠构造器模式（telescoping constructor），还是Java bean，都不能保证安全性和可读性。推荐使用builder模式来构造12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758public class NutritionFacts &#123; private final int servingSize; private final int servings; private final int calories; private final int fat; private final int sodium; private final int carbohydrate; public static class Builder &#123; // Required parameters private final int servingSize; private final int servings; // Optional parameters - initialized to default values private int calories = 0; private int fat = 0; private int sodium = 0; private int carbohydrate = 0; public Builder(int servingSize, int servings) &#123; this.servingSize = servingSize; this.servings = servings; &#125; public Builder calories(int val) &#123; calories = val; return this; &#125; public Builder fat(int val) &#123; fat = val; return this; &#125; public Builder sodium(int val) &#123; sodium = val; return this; &#125; public Builder carbohydrate(int val) &#123; carbohydrate = val; return this; &#125; public NutritionFacts build() &#123; return new NutritionFacts(this); &#125; &#125; private NutritionFacts(Builder builder) &#123; servingSize = builder.servingSize; servings = builder.servings; calories = builder.calories; fat = builder.fat; sodium = builder.sodium; carbohydrate = builder.carbohydrate; &#125;&#125; 调用12NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8) .calories(100).sodium(35).carbohydrate(27).build();]]></content>
