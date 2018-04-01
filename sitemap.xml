@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.myloveivory.me/2018/04/01/effective-java-8/</loc>
+    
+    <lastmod>2018-04-01T12:59:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.myloveivory.me/2018/04/01/java-concurrency-in-practice/</loc>
+    
+    <lastmod>2018-04-01T12:58:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.myloveivory.me/2018/04/01/effective-java-7/</loc>
+    
+    <lastmod>2018-04-01T12:55:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.myloveivory.me/2018/04/01/effective-java-6/</loc>
+    
+    <lastmod>2018-04-01T12:55:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.myloveivory.me/2018/04/01/effective-java-5/</loc>
+    
+    <lastmod>2018-04-01T12:55:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.myloveivory.me/2018/03/28/effective-java-4/</loc>
     
     <lastmod>2018-03-28T14:37:56.000Z</lastmod>

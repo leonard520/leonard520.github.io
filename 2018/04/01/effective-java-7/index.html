@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java, Distribute, love, Ivory" />
+  <meta name="keywords" content="Java, effective Java, 读书笔记," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Leonard&#39;s blog">
-<meta property="og:url" content="http://www.myloveivory.me/tags/Python/index.html">
+<meta name="description" content="避免使用终结方法终结方法（finalizer）通常是不可预测的，一般情况不要使用。当然终结方法也有可取之处，但是应该尽量避免使用终结方法终结方法的缺点在于不能保证会被及时的执行，所以注重时间的任务不该由终结方法来完成。不应该依赖终结方法来更新重要的持久状态System.gc和System.runFinalization不保证终结方法一定会被执行如果未捕获的异常在终结过程被抛出来，那么异常会被忽略。">
+<meta name="keywords" content="Java, effective Java, 读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Effective Java读书笔记-7">
+<meta property="og:url" content="http://www.myloveivory.me/2018/04/01/effective-java-7/index.html">
 <meta property="og:site_name" content="Leonard&#39;s blog">
+<meta property="og:description" content="避免使用终结方法终结方法（finalizer）通常是不可预测的，一般情况不要使用。当然终结方法也有可取之处，但是应该尽量避免使用终结方法终结方法的缺点在于不能保证会被及时的执行，所以注重时间的任务不该由终结方法来完成。不应该依赖终结方法来更新重要的持久状态System.gc和System.runFinalization不保证终结方法一定会被执行如果未捕获的异常在终结过程被抛出来，那么异常会被忽略。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-01T12:55:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leonard&#39;s blog">
+<meta name="twitter:title" content="Effective Java读书笔记-7">
+<meta name="twitter:description" content="避免使用终结方法终结方法（finalizer）通常是不可预测的，一般情况不要使用。当然终结方法也有可取之处，但是应该尽量避免使用终结方法终结方法的缺点在于不能保证会被及时的执行，所以注重时间的任务不该由终结方法来完成。不应该依赖终结方法来更新重要的持久状态System.gc和System.runFinalization不保证终结方法一定会被执行如果未捕获的异常在终结过程被抛出来，那么异常会被忽略。">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.myloveivory.me/tags/Python/"/>
+  <link rel="canonical" href="http://www.myloveivory.me/2018/04/01/effective-java-7/"/>
 
 
 
 
 
-  <title>标签: Python | Leonard's blog</title>
+  <title>Effective Java读书笔记-7 | Leonard's blog</title>
   
 
 
@@ -160,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,54 +293,203 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Python<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.myloveivory.me/2018/04/01/effective-java-7/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leonard Ding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leonard's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/01/python-basic/" itemprop="url">
-              
-                <span itemprop="name">Python 语法基础</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Effective Java读书笔记-7</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-01T15:37:00+08:00"
-              content="2018-01-01" >
-          01-01
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T20:52:33+08:00">
+                2018-04-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="避免使用终结方法"><a href="#避免使用终结方法" class="headerlink" title="避免使用终结方法"></a>避免使用终结方法</h2><p>终结方法（finalizer）通常是不可预测的，一般情况不要使用。当然终结方法也有可取之处，但是应该尽量避免使用终结方法<br>终结方法的缺点在于不能保证会被及时的执行，所以注重时间的任务不该由终结方法来完成。<br>不应该依赖终结方法来更新重要的持久状态<br>System.gc和System.runFinalization不保证终结方法一定会被执行<br>如果未捕获的异常在终结过程被抛出来，那么异常会被忽略。如果另一个线程企图使用这种被破坏的对象，这是危险的<br>性能损失。创建和销毁对象大约为5.6ns，增加终结方法使时间增加到了2400ns<br>如果使用终结方法，必须显示提供一个方法，并且在类里记录自己是否被终止。例如InputSteam中的close方法。</p>
+<p>终结方法的好处：<br>在忘记调用显式终止方法时，充当安全网<br>普通对象通过本地方法（native method）委托给一个本地对等体（native peer），因为本地对等体不是一个普通对象，所以垃圾回收器不会知道它，当它的Java对等体被回收的时候，它不会被回收。本地对等体就需要一个显式的终止方法。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打个赏呗</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Leonard Ding WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java-effective-Java-读书笔记/" rel="tag"># Java, effective Java, 读书笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/01/effective-java-6/" rel="next" title="Effective Java读书笔记-6">
+                <i class="fa fa-chevron-left"></i> Effective Java读书笔记-6
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/01/effective-java-8/" rel="prev" title="Effective Java读书笔记-8">
+                Effective Java读书笔记-8 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -343,6 +497,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -363,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -426,6 +593,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#避免使用终结方法"><span class="nav-number">1.</span> <span class="nav-text">避免使用终结方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -559,10 +742,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
