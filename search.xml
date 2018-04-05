@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Effective Java读书笔记-12]]></title>
+    <url>%2F2018%2F04%2F05%2Feffective-java-12%2F</url>
+    <content type="text"><![CDATA[考虑实现Comparable接口compareTo是Comparable接口中唯一方法。compareTo不但允许进行简单的比较，还允许执行顺序比较。一旦类实现了Comparable接口，就可以和很多泛型算法及依赖于该接口的集合实现进行coding，如果一个类有明显的内在排序关系，就应该实现这个接口。123public interface Comparable&lt;T&gt;()&#123; int compareTo(T t);&#125; compareTo方法遵守equals约定遵守的限制条件。当你实现了一个Comparable接口的类，请不要扩展它，而是编写另外一个类，其中包含第一个类的一个实例。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-11]]></title>
+    <url>%2F2018%2F04%2F05%2Feffective-java-11%2F</url>
+    <content type="text"><![CDATA[谨慎覆盖cloneclone方法的约定： x.clone() != x x.clone().getClass == x.getClass() x.clone().equals(x)如果对象中包含的域引用了可变的对象，则需要对可变对象进行clone，有时候还需要对对象deep copy。总之，所有实现了cloneable接口的类都应该正确覆盖clone。首先调用super.clone，然后修正需要修正的域，包括深层copy，但是也有例外，比如代表序号或其他唯一ID的域，或者代表创建时间的域，都需要被修正。另一个实现对象拷贝的方法是提供一个copy constructor或者copy factory，这样不依赖于语言之外的对象创建机制。更进一步，这样可以带参数。正是因为cloneable接口具有的这些问题，所以除非能提供行为良好的受保护的clone方法，否则不应该去实现。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-10]]></title>
+    <url>%2F2018%2F04%2F05%2Feffective-java-10%2F</url>
+    <content type="text"><![CDATA[始终覆盖toString当对象被传递给println, printf，字符串操作符及assert或者被调试器打印出来时，toString方法会被自动调用]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-9]]></title>
+    <url>%2F2018%2F04%2F05%2Feffective-java-9%2F</url>
+    <content type="text"><![CDATA[覆盖equals总要覆盖hashCode 在应用程序的一次执行期间，只要对象的equals方法的比较操作所用的信息没有被修改，那么对这个对象调用多次，hashCode方法都必须始终如一地返回同一个整数。在同一个应用程序的多次执行过程中，每次执行所返回的整数可以不一致 如果两个对象根据equals(Object)方法比较结果相等的，那么调用这两个对象中任意一个对象的hashCode方法都必须产生同样的整数结果。 如果两个对象根据equals(Object)方法比较是不相等的，那么调用这两个对象中任意一个对象的hashCode方法不一定要产生不一样的整数结果。但是我们应该知道，给不相等的对象产生不相同的整数结果，可以提高散列表(hashtable)的性能。相等的对象必须具有相等的散列码，并且一个好的散列函数通常倾向于为不相等的对象产生不相等的散列码。hashcode简单的实现 int result = 17; 对每个关键域（equals方法中涉及的每个域），进行result = 32 * result + f对boolean，f ? 1:0对byte， char， short或者int，计算(int)f对long，计算(int)(f ^ f &gt;&gt;&gt; 32))对float， 计算Float.floatToIntBits(f)对double，计算Double.doubleToLongBits(f)，然后进行对long的操作对一个对象引用，则递归调用hashcode对域是一个数组，把每个元素当成单独的域来处理 如果一个类是不可变的，考虑把散列码缓存在对象内部]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java并发编程实战]]></title>
     <url>%2F2018%2F04%2F01%2Fjava-concurrency-in-practice%2F</url>
     <content type="text"><![CDATA[基础知识线程安全性确保多线程访问不会出错：不在线程之间共享状态变量；把状态变量设为不可变；使用同步 线程安全性的定义中，最核心的概念就是正确性；在线程安全类中封装了必要的同步机制，则客户端无须进一步采取同步 原子性与竞态条件 加锁机制。Java提供了内置锁机制支持原子性，同步代码块（synchronized block）synchronized (lock) {}每个Java对象都可以用作一个实现同步的锁，线程在进入同步代码块之前会自动获得锁，并且在退出时自动释放（无论正常逻辑或异常抛出）Java内置锁相当于一种互斥体，最多只有一个线程持有这种锁。当某个线程请求一个由其他线程持有的锁时，发出请求的线程就会阻塞，由于内置锁是可重入的，所以某个线程试图获得一个已经由它已经持有的锁，请求会成功。重入的实现方法是为每个锁关联一个计数值和所有者线程。进入同步块加1，退出同步块减1，计数值为0时，锁被释放。用锁来保护状态。多个线程访问变量需要持有同一个锁，则称状态变量由锁保护。一种常见的锁约定是将所有的可变状态封装在对象内，并用对象的内置锁来同步。 活跃性与性能，需要平衡 对象共享 可见性。当读操作和写操作在不同的线程中，对某变量写入然后读取这个值，并非总能得到相同的值。在没有同步的情况下，编译器、处理器以及运行时都可能对操作的执行顺序进行调整，要想对内存操作的执行顺序进行判断，是不可能的。加锁的含义不仅局限于互斥行为，还包括内存可见性，为了确保所有线程都能看到共享变量的最新值，所有执行读操作或写操作都必须在同一锁上同步。volatile类型。编译器与运行时都会注意到这个变量是共享的，不会重排序或是缓存到寄存器或者其他处理器不可见的地方。 发布与逸出。发布指使对象能够在当前作用域之外的代码中使用，例如将对象的引用保存到一个公有的静态变量中。不要在构造过程中使this引用逸出 线程封闭，例如局部变量和ThreadLocal（每个线程都会拥有属于自己的对象） 不变性。满足以下条件，对象创建后不能修改；所有域是final；正确创建并没有逸出 安全发布。对象的引用及状态必须对其它线程可见：在静态初始化函数中初始化；将对象引用保存到volatile或atomicReference；将对象引用保存到正确构造对象；将对象引用保存到由锁保护的域。为了安全的共享对象，策略包括：线程封闭；只读共享；线程安全共享（在对象内部实现同步）；保护对象（通过特定锁） 对象组合 设计线程安全的类。找出构成对象状态的所有变量；找出约束状态变量的不变性条件；建立对象状态的并发访问管理策略 实例封闭。将数据封装在对象内部，可以将数据的访问限制在对象的方法上。 在现有的线程安全类中添加功能 线程安全性的委托，例如委托给atomicInteger 基础构建模块 同步容器类：Vector和Hashtable，线程安全，但是仍然需要额外的锁来保护复合操作 并发容器：ConcurrentHashMap。由于ConcurrentHashMap不能被加锁来执行独占访问，一些常见的复合操作都已经实现为原子操作；copyOnWriteArrayList用于替代同步list，它的安全性在于只要正确发布了一个事实不可改变的对象，那么在访问时就不需要进一步同步，每次修改时都会创建并重新发布一个新的容器副本。 阻塞队列和生产者消费者模式，提供put和take方法以及支持定时的offer和pull方法。BlockingQueue维护一组线程，这些线程在等待着把元素加入或移除队列。 阻塞与中断方法 同步工具类。semaphore， barrier，latch 小结：可变状态是至关重要的，不可变对象一定是线程安全的尽量将域声明为final封装有助于管理复杂性用锁保护可变变量，并且保护同一个不变性条件中的所有变量时，要使用同一个锁；在执行复合操作期间，要持有锁不要故作聪明的推断出不需要使用同步同步策略文档化 结构化并发应用程序任务执行Executor框架 执行策略：newFixedThreadPool, 固定长度，如果某个线程由于发生未预期的exception，将会补充一个新的newCachedThreadPool，灵活回收和添加，不存在限制newSingleThreadExecutor，单线程newScheduledThreadPool，固定长度，延时或定时 callable和future completionService，在计算完成后获得结果 为任务设置时限 取消与关闭 任务取消。通常，中断是实现取消的最合理方式。当检查到中断请求时，在完成任务后抛出interruptedException表示收到。调用可中断的阻塞函数，例如thread.sleep和blockingQueue.wait，可以传递异常或恢复中断状态。如果代码不会调用可中断的阻塞方法，那么仍然可以通过在任务代码中轮询当前线程的中断状态 通过future中断 停止基于线程的服务。 处理非正常的线程终止 JVM关闭。使用钩子，守护线程，终结器（避免） 线程池的使用图形用户界面活跃性性能与测试避免活跃性危险 锁顺序死锁。如果所有线程以固定顺序来获得锁，那么就不会出现锁顺序死锁问题 动态的锁顺序死锁 协作对象之间发生死锁。如果锁持有某个外部方法，就会出现活跃性问题。 开放调用以及锁顺序的依赖，反应在构造同步对象（而不是对已构造好的对象进行同步），在程序中应尽量使用开放调用。 资源死锁以及饥饿死锁 为了避免死锁，支持定时的锁 其他活跃性危险：饥饿（避免使用线程优先级），活锁（重试引入随机性）小结：死锁后除了终止应用之外，没有其他机制。 性能与可伸缩性 amdahl定律。N为处理器数量 线程引入的开销：上下文切换；内存同步；阻塞 减少锁的竞争：缩小锁的范围；减小锁的粒度；锁分段；避免热点；一些替代独占锁的方法（并发容器，读写锁，不可变对象以及原子变量） 不要用对象池 并发程序的测试 正确性测试：单元测试；阻塞测试；安全性测试（countDownLatch和cyclicBarrier） 吞吐量，响应性，可伸缩性 测试陷阱：垃圾回收影响结果；动态编译（运行足够长时间）；代码路径偏差；不真实的竞争；无用代码的消除（程序里有） 高级主题显示锁 ReentrantLock，轮询锁与定时锁避免死锁；可以中断等待获取锁的线程；可以无限等下去；ReentrantLock性能更好；提供公平和非公平 读写锁：可选实现：释放优先（读与写谁优先）；重入性；降级；升级 构建自定义的同步工具 状态依赖性的管理。在条件等待中存在一种重要的三元关系，包括加锁，wait方法和一个条件谓词。条件谓词包含多个状态变量，而状态变量用一个锁来保护。锁对象与条件队列队形必须是同一个对象。如果条件谓词不为真，wait方法将释放锁，阻塞当前线程，并等待直到超时，然后线程被中断或者通过一个通知被唤醒。在唤醒进程后，wait在返回前还要重新获取锁。当线程从wait方法中被唤醒时，它在重新请求锁时不具有任何特殊的优先级。 过早唤醒：每次必须检查条件谓词；丢失的信号：如果A通知了一个条件队列，而B随后在这个条件队列等待，那么B将不会立即醒来 通知：notify及notifyAll。 显示condition对象，在每个锁上存在多个等待、条件等待可以是中断/非中断的，基于时限的，以及公平/非公平的对列操作。 AQShttp://www.cnblogs.com/waterystone/p/4920797.html 原子变量与非阻塞同步机制 与基于锁的方案相比，非阻塞算法在设计和实现上要复杂的多，但他们在伸缩性和活跃性上却又巨大的优势。对于一些线程被挂起并且稍后恢复运行，必须等待其他线程执行完它们的时间片，并且在挂起和恢复过程中存在很大的开销；并且当线程在持有锁的情况下被延迟执行，所有需要的锁的线程都将无法执行。 硬件对并发的支持：比较并交换（CAS） 原子变量类。 Java内存模型编译器中生成的指令顺序可以与源代码中的不同，此外编译器还会把变量保存在寄存器而不是内存中。Java底层技术除了提高程序的执行速度外，不会产生其他影响JMM规定了JVM必须遵循一组最小保证，这组保证规定了对变量的写入操作何时对其他线程可见。 平台的内存模型。每个处理器都拥有自己的缓存，并且定期的与主内存协调。处理器会适当放宽存储一致性保证，以换取性能的提升。内存模型*定义了一些特殊的指令，称为内存栅栏。 重排序。同步将限制编译器、运行时和硬件对内存操作重排序的方式，从而保证JMM提供的可见性保证 Java内存模型简介。JMM为程序操作定义了一个偏序关系，称为happens-before程序顺序规则：如果程序操作A在B之前，那么线程中A在B之前。监视器锁规则：在监视器锁上解锁必须在同一监视器的加锁之前。volatile变量规则：对一个volatile域的写，happens- before 于任意后续对这个volatile域的读。传递性：如果A happens- before B，且B happens- before C，那么A happens- before C。 借助同步。例如在FutureTask在调用tryAcquireShared之前总能成功调用tryReleaseShared，就可以保证innerSet中写入操作在innerGet中的读取操作之前。 发布。除了不可变对象以外，使用被另一个线程初始化的对象通常都不安全。]]></content>
