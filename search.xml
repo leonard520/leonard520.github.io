@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Effective Java读书笔记-16]]></title>
+    <url>%2F2018%2F04%2F10%2Feffective-java-16%2F</url>
+    <content type="text"><![CDATA[复合优先于继承继承是实现代码重用的有力手段，但使用不当会导致软件变动脆弱。继承可能打破封装性。子类信赖于其超类中特定功能的实现细节。超类的实现有可能会随着发行版本的不同而有变化，子类有可能会被破坏。1234567891011121314151617181920212223242526// Broken - Inappropriate use of inheritance! public class InstrumentedHashSet&lt;E&gt; extends HashSet&lt;E&gt; &#123; // The number of attempted element insertions private int addCount = 0; public InstrumentedHashSet() &#123; &#125; public InstrumentedHashSet(int initCap, float loadFactor) &#123; super(initCap, loadFactor); &#125; @Override public boolean add(E e) &#123; addCount++; return super.add(e); &#125; @Override public boolean addAll(Collections&lt;? extends E&gt; c) &#123; addCount += c.size(); return super.addAll(c); &#125; public int getAddCount() &#123; return addCount; &#125; &#125; 使用“复合(composition)”可以解决上述的问题，不用扩展现有的类，而是在新的类中增加一个私有域。通过“转发”来实现与现有类的交互，这样得到手类将会非常稳固。它不信赖于现有类的实现细节。即使现有的类增加了新方法，也不会影响到新类。继承的功能非常强大，但是也存在诸多问题，因为它违反了封装原则。只有当子类和超类之间确实存在子类型的关系时，使用继承才是恰当的。即使如此，如果子类和超类处在不同的包中，并且超类并不是为了继承而设计的，那么继承将会导致脆弱性。为了避免这种情况，可以使用复合和转发机制来代替继承，尤其是当存在适当的接口可以实现包装类的时候。包装类不仅比子类更加健壮，而且功能也更强大]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-15]]></title>
+    <url>%2F2018%2F04%2F10%2Feffective-java-15%2F</url>
+    <content type="text"><![CDATA[使可变性最小化不可变类只是其实例不能被修改的类，并在整个生命周期中不变。Java平台类库中包含许多不可变的类，其中有string，BigInteger和BigDecimal 不要提供任何会修改对象状态的方法（mutator） 保证类不会被扩展。 使所有的域都是final的，一般设置类为final，或者设置构造函数为私有并添加静态工厂 使所有的域都成为私有的 确保对于任何可变组件的互斥访问不可变对象比较简单。不可变对象本质上是线程安全的，它们不要求同步。当多线程并发访问这样的对象时，它们不会遭到破坏。这毫无疑问是获得线程安全最容易的方法。不可变对象可以自由的被共享对于经常被使用的值，为它们提供公有的静态final常量。进一步，可以提供静态工厂把实例缓存起来。永远不需要进行保护性拷贝。坚决不要为每个get方法编写一个相应的set方法。如果类不能被设计成不可变的，仍然要限制它的可变性。除非有令人满意的理由要使域变成非final的，否则每个域都应该是final的。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-14]]></title>
+    <url>%2F2018%2F04%2F10%2Feffective-java-14%2F</url>
+    <content type="text"><![CDATA[在公有类中使用访问方法而非公有域公有类永远都不应该暴露可变的域，让公有域暴露不可变域的危害较小（可以强加约束条件，不能改变域表示法），有时候需要用包级私有或者私有的嵌套类来暴露域，无论这个类是可变还是不可变的。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-13]]></title>
+    <url>%2F2018%2F04%2F10%2Feffective-java-13%2F</url>
+    <content type="text"><![CDATA[类和接口使类和成员的可访问性最小化设计良好的模块，对于外部的其它模块，隐藏了内部数据和实现细节，把API和实现清晰的隔离开来。这样的好处是可以有效的解除模块的耦合关系，是模块可以独立的开发、测试、优化，加速开发。 尽可能使每个类或者成员不被外界访问。私有的（private）：只有在声明该成员的顶层类内部才可以访问这个成员。包级私有（package-private）：声明该成员的包内部的任何类都可以访问这个成员。这也被称为“缺省(default)访问级别”，如果没有为成员指定访问修饰符，就采用这个访问级别。受保护的（ protected）：允许子类及所在包的类都允许访问。公有的（public）：任何地方都可以访问。 类如果实现了Serializable接口，那么这些域就有可能会被泄露到导出的API中 如果方法覆盖了超类中的一个方法，那么子类中的访问级别不允许低于超类中的访问级别 实例域是不能公有的。同样的建议适用于静态域。只有一种例外，公有的静态final域暴露常量，惯例是用大写字母+下划线构成 嵌套类静态嵌套类：不能访问外部类的非静态成员，很少使用非静态嵌套类（内部类），再可以分为以下三类。内部类仍然是一个独立的类，在编译之后会内部类会被编译成独立的.class文件，但是前面冠以外部类的类命和$符号。 内部类不能用普通的方式访问。内部类是外部类的一个成员，因此内部类可以自由地访问外部类的成员变量，无论是否是private的。一个类中直接定义一个方法中定义匿名内部类]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Effective Java读书笔记-12]]></title>
     <url>%2F2018%2F04%2F05%2Feffective-java-12%2F</url>
     <content type="text"><![CDATA[考虑实现Comparable接口compareTo是Comparable接口中唯一方法。compareTo不但允许进行简单的比较，还允许执行顺序比较。一旦类实现了Comparable接口，就可以和很多泛型算法及依赖于该接口的集合实现进行coding，如果一个类有明显的内在排序关系，就应该实现这个接口。123public interface Comparable&lt;T&gt;()&#123; int compareTo(T t);&#125; compareTo方法遵守equals约定遵守的限制条件。当你实现了一个Comparable接口的类，请不要扩展它，而是编写另外一个类，其中包含第一个类的一个实例。]]></content>
