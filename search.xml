@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Effective Java读书笔记-24]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-24%2F</url>
+    <content type="text"><![CDATA[消除非受检警告SupperessWarnings注解可以用在任何粒度级别中，应该始终在尽可能小的范围内使用SupperessWarnings注解。永远不要在整个类上使用SupperessWarnings，这么做可能会掩盖重要的警告。每当使用SupperessWarnings(“unchecked”)注解时，都要添加一条注释，说明为什么这么做是安全的。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-23]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-23%2F</url>
+    <content type="text"><![CDATA[泛型请不要在新代码中使用原生态类型使用原生态类型虽然也是合法的，但是不应该这样做，因为这会失去泛型在安全性和表述性方面的所有优势。原生态类型存在的理由是因为老代码的移植兼容性。记住以下三种情况的区别： Set是个参数化类型，表示可以包含任何对象类型的一个集合。 Set&lt;?&gt;是一个通配符类型，表示只能包含某种未知对象类型的一个集合。 Set是一个原生态类型，它脱离了泛型系统。前两种是安全的，最后一种是不安全的。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-22]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-22%2F</url>
+    <content type="text"><![CDATA[优先考虑静态成员类静态成员类是最简单的一种嵌套类。最好把他看做是普通的类，只是碰巧被声明在另一个类的内部而已，如果他被声明为私有的，他就只能在外围类的内部才可以被访问，等等。注意：如果一个类要被声明为static的，只有一种情况，就是静态内部类。如果在外部类声明为static，程序会编译都不会过。如果声明成员类不要求访问外围实例，就要始终把static修饰符放在它的生命中，使它成为静态成员类，而不是非静态成员类。如果省略了static修饰符，则每个实例都将包含一个额外的指向外围对象的引用。保存这份引用要消耗时间和空间，并且会导致外围实例在符合垃圾回收时仍然得以保留。如果没有外围实例的情况下，也需要分配实例，就不能使用非静态成员类，因为非静态成员类的实例必须要有一个外围实例。非静态成员类常见用法是定义一个Adapter，它允许外部类的实例被看作是另一个不相关的类的实例。例如，Map接口的实现往往使用非静态成员类来实现它们的集合视图（collection view），这些集合视图是由Map的keySet、entrySet和Values方法返回的。1234567891011121314151617181920212223242526public class Outer &#123; public int a; private int b; public static int s; private static int s2; public Outer() &#123; a = 1; b = 2; &#125; public class Inner&#123; public int c; private int d; Inner()&#123; c = a; d = b; &#125; &#125; public static class InnerStatic&#123; public int c; private int d; InnerStatic()&#123; c = s; d = s2; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-21]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-21%2F</url>
+    <content type="text"><![CDATA[用函数对象表示策略有些语言支持函数指针、代理、lambda表达式，或者支持类似的机制，允许程序把“调用特殊函数的能力”储存起来并传递这种能力。这种机制通常用于允许函数的调用者通过传入第二个函数，来指定自己的行为。Java没有提供函数指针，但是可以用对象引用实现同样的功能。调用对象上的方法通常是执行该对象上的某个操作。12345class StringLengthComparator &#123; public int compare(String s1, String s2) &#123; return s1.length() - s2.length(); &#125;&#125; 总而言之，函数指针的主要用途就是实现策略模式。为了在Java中实现这种模式，要声明一个接口来表示该策略，并且为每一个策略声明一个实现了该接口的类。当一个具体策略只被使用一次时，通常使用匿名类来声明和实例化这个具体策略类。当一个具体策略类时设计用来重复使用的时候，它的类通常就要被实现为私有的静态成员类，并通过公有的静态final域被导出，其类型为该策略接口。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-20]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-20%2F</url>
+    <content type="text"><![CDATA[类层次优先于标签类标签类，一个类中有许多样板代码充斥在一个单类中，破坏可读性，内存占用增加，因为实例承担着不相关的域，实例化域不当，会引起程序bug，总之标签类过于冗余，容易出错，并且效率低下。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-19]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-19%2F</url>
+    <content type="text"><![CDATA[接口只用于定义类型当类实现接口时，接口就充当可以引用这个类的实例类型。因此，类实现了接口，就表明客户端对这个类的实例可以实施某些动作。为了任何其他目的而定义的接口是不恰当的。常量接口是对接口的一种不良使用。如果这些常量与某些现有的类或者接口紧密相关，就应该把这些常量添加到这个类或者接口中，注意，这里说添加到接口中并不是指的常量接口.123456public class PhysicalConstants &#123; private PhysicalConstants() &#123;&#125; public static final double AVOGADROS_NUMBER = 6.23156412e23; public static final double BOLTZMANN_CONSTANT = 1.12588456e-23; ...&#125; 总之，接口应该只被用来定义类开，它们不应该用来导出常量。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-18]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-18%2F</url>
+    <content type="text"><![CDATA[接口优于抽象类Java语言提供了两种机制，可以用来定义一个允许多个实现的类型：接口和抽象类接口优点： 现有的类可以很容易的被更新，以实现新的接口 接口是定义mixin（混合类型）的理想选择 接口允许我们构造非层次结构的类型框架骨架实现类的优点在于，它们提供抽象类的所有实现的帮助，而不会强加抽象类作为类型定义时的严格约束。对于具有骨架实现类的接口的大多数实现者来说，继承这个类是显而易见的选择，但它不是必需的。如果一个类不能继承骨架的实现，这个类可以直接实现接口。该类仍然受益于接口本身的任何默认方法。此外，骨架实现类仍然可以协助接口的实现。实现接口的类可以将接口方法的调用转发给继承骨架实现的私有内部类的包含实例。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Effective Java读书笔记-17]]></title>
+    <url>%2F2018%2F05%2F06%2Feffective-java-17%2F</url>
+    <content type="text"><![CDATA[要么为继承而设计，要么禁止继承（构造器决不能调用可覆盖的方法）该类必须有文档说明它可覆盖的方法的自用性。对于每个公有的或受保护的方法或者构造器，它的文档必须指明该方法或者构造器调用了哪些可覆盖的方法，是以什么顺序调用的，每个调用的结果又是如何影响后续的处理过程的。为了允许继承，类还必须遵守其他的一些约束。构造器决不能调用可被覆盖的方法，无论是直接调用还是间接调用]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java, effective Java, 读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Effective Java读书笔记-16]]></title>
     <url>%2F2018%2F04%2F10%2Feffective-java-16%2F</url>
     <content type="text"><![CDATA[复合优先于继承继承是实现代码重用的有力手段，但使用不当会导致软件变动脆弱。继承可能打破封装性。子类信赖于其超类中特定功能的实现细节。超类的实现有可能会随着发行版本的不同而有变化，子类有可能会被破坏。1234567891011121314151617181920212223242526// Broken - Inappropriate use of inheritance! public class InstrumentedHashSet&lt;E&gt; extends HashSet&lt;E&gt; &#123; // The number of attempted element insertions private int addCount = 0; public InstrumentedHashSet() &#123; &#125; public InstrumentedHashSet(int initCap, float loadFactor) &#123; super(initCap, loadFactor); &#125; @Override public boolean add(E e) &#123; addCount++; return super.add(e); &#125; @Override public boolean addAll(Collections&lt;? extends E&gt; c) &#123; addCount += c.size(); return super.addAll(c); &#125; public int getAddCount() &#123; return addCount; &#125; &#125; 使用“复合(composition)”可以解决上述的问题，不用扩展现有的类，而是在新的类中增加一个私有域。通过“转发”来实现与现有类的交互，这样得到手类将会非常稳固。它不信赖于现有类的实现细节。即使现有的类增加了新方法，也不会影响到新类。继承的功能非常强大，但是也存在诸多问题，因为它违反了封装原则。只有当子类和超类之间确实存在子类型的关系时，使用继承才是恰当的。即使如此，如果子类和超类处在不同的包中，并且超类并不是为了继承而设计的，那么继承将会导致脆弱性。为了避免这种情况，可以使用复合和转发机制来代替继承，尤其是当存在适当的接口可以实现包装类的时候。包装类不仅比子类更加健壮，而且功能也更强大]]></content>
